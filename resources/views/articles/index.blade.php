@@ -11,6 +11,7 @@
 	   </div>
 	   <div class="panel-body">
 	      {{ $article->content }}
+
 	   </div>
 	</div>
 	<hr />

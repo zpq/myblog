@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use App\Articles;
 use Carbon;
 
+
 class ArticleController extends Controller
 {
     public function index()
