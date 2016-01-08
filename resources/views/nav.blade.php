@@ -5,7 +5,7 @@
 	   <div class="collapse navbar-collapse" id="example-navbar-collapse">
 	      <ul class="nav navbar-nav">
 	         <li class='active'><a href="{{ url('/funny') }}">book list</a></li>
-	         <li><a href="{{ url('/funny') }}">funny</a></li>
+	         <li><a href="{{ url('/donate') }}">donate</a></li>
 	         <li><a href="{{ url('/about') }}">about me</a></li>
 	      </ul>
 	   </div>
