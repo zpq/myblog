@@ -15,20 +15,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/site/index', 'SiteController@index');
-// Route::get('/note', 'SiteController@note');
 
-Route::get('/about', 'SiteController@about');
+Route::get('about', 'SiteController@about');
+Route::get('articles', 'ArticleController@index');
+Route::get('articles/create', 'ArticleController@create');
+Route::get('articles/{id}', 'ArticleController@show');
+Route::post('articles', 'ArticleController@store');
 
-Route::get('/articles', 'ArticleController@index');
-Route::get('/articles/create', 'ArticleController@create');
-Route::get('/articles/{id}', 'ArticleController@show');
-
-Route::post('/articles', 'ArticleController@store');
-
-
-
-
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+	
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -41,5 +40,29 @@ Route::post('/articles', 'ArticleController@store');
 */
 
 Route::group(['middleware' => ['web']], function () {
-    //
+	
+
 });
+
+
+Route::group(['prefix'=>'backend','middleware'=>'auth'],function(){
+	
+	Route::any('/','backend\HomeController@index');
+// 	Route::resource('home', 'backend\HomeController');
+// 	Route::resource('cate','backend\CateController');
+// 	Route::resource('content','backend\ContentController');
+// 	Route::resource('article','backend\ArticleController');
+// 	Route::resource('tags','backend\TagsController');
+// 	Route::resource('user','backend\UserController');
+// 	Route::resource('comment','backend\CommentController');
+// 	Route::resource('nav','backend\NavigationController');
+// 	Route::resource('links','backend\LinksController');
+// 	Route::controllers([
+// 			'system'=>'backend\SystemController',
+// 			'upload'=>'backend\UploadFileController'
+// 	]);
+
+});
+
+
+

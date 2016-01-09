@@ -9,17 +9,17 @@ use App\Http\Controllers\Controller;
 use App\Articles;
 use Carbon;
 
-
 class ArticleController extends Controller
 {
     public function index()
     {
+    	dd(Auth::check());
 		$articles = Articles::all();
 		return view('articles.index')->with('articles', $articles);
 	}
 	
 	public function show($id)
-	{
+	{    	
 		$article = Articles::findOrFail($id);
 		return view('articles.show')->with('article', $article);
 	}

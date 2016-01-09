@@ -32,5 +32,7 @@
 	<a href='#' class="btn btn-default xxx">成信警告功</a>
 	
 	<hr />
+	
 	<p><a href="{{ url('/articles/create') }}" class="btn btn-primary btn-lg">write something</a></p>
+	<p><a href="{{ url('/backend/') }}" class="btn btn-primary btn-lg">manage</a></p>
 </div>

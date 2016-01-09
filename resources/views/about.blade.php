@@ -13,7 +13,7 @@
 <ul class="list-group">
    <li class="list-group-item">Me : {{ $name }}</li>
    <li class="list-group-item">Description : {{ $description }}</li>
-   <li class="list-group-item"><span class="badge">新</span>Email : {{ $email }}</li>
+   <li class="list-group-item"><span class="badge"></span>Email : {{ $email }}</li>
    <li class="list-group-item">Github : <a target='_blank' href="{{ $github}}">{{ $github }}</a></li>
 </ul>
 

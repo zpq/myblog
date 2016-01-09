@@ -20,7 +20,6 @@
 <body>
 <div class="container">	
 	<div class="row">
-		<div class='row'>&nbsp;</div>
 		@include('nav')
 		@include('left')
 		@include('right')
