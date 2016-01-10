@@ -5,6 +5,12 @@ use App\Http\Controllers\Controller;
 use Request;
 use Log;
 class SiteController extends Controller {
+	
+	
+// 	public function __construct() {
+// 		$this->middleware('auth');
+// 	}
+	
 	/**
 	 * 显示首页。
 	 *
@@ -30,7 +36,7 @@ class SiteController extends Controller {
 	
 	public function note()
 	{
-		var_dump(Request::input('id'));
+// 		var_dump(Request::input('id'));
 		Log::write('info', 'this is test log');
 		return 'this is site/note';
 	}

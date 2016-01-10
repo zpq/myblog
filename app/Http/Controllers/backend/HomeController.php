@@ -2,19 +2,29 @@
 
 namespace App\Http\Controllers\backend;
 
-use Illuminate\Http\Request;
-
 use App\Http\Requests;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
 {
-	
-// 	public function __construct() {
-// 		$this->middleware('auth');
-// 	}
-	
-    public function index() {
-		dd('admin');
-	}
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+//         $this->middleware('auth');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return Response
+     */
+    public function index()
+    {
+        return view('backend.home.home');
+    }
 }
