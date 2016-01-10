@@ -156,6 +156,8 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+    		
+    	YuanChao\Editor\EndaEditorServiceProvider::class,
 
     ],
 
@@ -204,6 +206,8 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
 		'Form' 		=> Collective\Html\FormFacade::class,
       	'Html' 		=> Collective\Html\HtmlFacade::class,
+    		
+    	'EndaEditor' => YuanChao\Editor\Facade\EndaEditorFacade::class,
     ],
 
 ];

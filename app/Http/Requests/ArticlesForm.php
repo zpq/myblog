@@ -25,7 +25,7 @@ class ArticlesForm extends Request
     	return [
     		'title' => 'required|min:5',
     		'content' => 'required',
-    		'published_at' => 'required'	
+//     		'published_at' => 'required'	
     	];
     }
 }

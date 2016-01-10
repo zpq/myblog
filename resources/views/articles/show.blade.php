@@ -5,7 +5,7 @@
 <hr />
 <article>
 	<div class="body">
-	{{ $article->content }}
+	<?php echo $article->content ?>
 	</div>
 </article>
 

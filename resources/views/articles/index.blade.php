@@ -23,7 +23,7 @@
 <!-- @endforeach -->
 <!-- </div> -->
 
-
+@if(count($articles))
 @foreach($articles as $article) 
 	<div class="row">
 		<div class="col-xs-12">
@@ -47,11 +47,12 @@
 				</div>
 			</div>
 			<br />
-			<div class="row">
-				<div class="col-xs-12 text-capitalize">
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ $article->content }}
-				</div>
-			</div>	
+<!-- 			<div class="row"> -->
+<!-- 				<div class="col-xs-12 text-capitalize"> -->
+<!-- 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ $article->content }} -->
+					<?php //echo $article->content ?>
+<!-- 				</div> -->
+<!-- 			</div>	 -->
 	
 			<div class="row">
 				
@@ -59,9 +60,9 @@
 			</div>
 		</div>
 	</div>
-		<hr/>
+	<hr/>
 @endforeach
-
+@endif
 
 <script>
 	$(function(){

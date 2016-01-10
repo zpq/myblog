@@ -31,26 +31,15 @@
 
 Route::group(['middleware' => ['web']], function () {
 	
-	Route::auth();
 	
-	Route::get('/', 'ArticleController@index');
-	Route::get('about', 'SiteController@about');
-	Route::get('articles', 'ArticleController@index');
-	Route::get('articles/create', 'ArticleController@create');
-	Route::get('articles/{id}', 'ArticleController@show');
-	Route::post('articles', 'ArticleController@store');
-
-// 	Route::get('auth/login', 'Auth\AuthController@getLogin');
-// 	Route::post('auth/login', 'Auth\AuthController@postLogin');
-// 	Route::get('auth/register', 'Auth\AuthController@getRegister');
-// 	Route::post('auth/register', 'Auth\AuthController@postRegister');
-// 	Route::get('auth/logout', 'Auth\AuthController@logout');
+	Route::group(['prefix'=>'backend', 'namespace'=> 'backend', 'middleware'=>'auth'], function(){
 	
-
-	Route::group(['prefix'=>'backend', 'middleware'=>'auth'], function(){
-	
-		Route::get('/', 'backend\HomeController@index');
-// 			Route::resource('home', 'backend\HomeController');
+		Route::get('/', 'HomeController@index');
+		Route::get('test', 'HomeController@test');
+		Route::get('articles', 'ArticleController@index');
+		Route::get('articles/create', 'ArticleController@create');
+		Route::post('articles', 'ArticleController@store');
+		// 			Route::resource('home', 'backend\HomeController');
 		// 	Route::resource('cate','backend\CateController');
 		// 	Route::resource('content','backend\ContentController');
 		// 	Route::resource('article','backend\ArticleController');
@@ -65,6 +54,25 @@ Route::group(['middleware' => ['web']], function () {
 		// 	]);
 	
 	});
+	
+
+	Route::auth();
+	
+	Route::get('/', 'ArticleController@index');
+	Route::get('about', 'SiteController@about');
+	Route::get('articles', 'ArticleController@index');
+// 	Route::get('articles/create', 'ArticleController@create');
+	Route::get('articles/{id}', 'ArticleController@show');
+// 	Route::post('articles', 'ArticleController@store');
+
+// 	Route::get('auth/login', 'Auth\AuthController@getLogin');
+// 	Route::post('auth/login', 'Auth\AuthController@postLogin');
+// 	Route::get('auth/register', 'Auth\AuthController@getRegister');
+// 	Route::post('auth/register', 'Auth\AuthController@postRegister');
+// 	Route::get('auth/logout', 'Auth\AuthController@logout');
+	
+
+
 	
 	
 	
