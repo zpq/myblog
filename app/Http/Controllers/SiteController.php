@@ -13,7 +13,6 @@ class SiteController extends Controller {
 	public function index()
 	{
 		Log::info('hello');
-// 		return 'this is site/index';
 		return view('home');
 	}
 	

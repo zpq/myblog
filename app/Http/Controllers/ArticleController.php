@@ -8,12 +8,13 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Articles;
 use Carbon;
+use App\Http\Requests\ArticlesForm;
 
 class ArticleController extends Controller
 {
     public function index()
     {
-    	dd(Auth::check());
+//     	dd(\Auth::user()->name);
 		$articles = Articles::all();
 		return view('articles.index')->with('articles', $articles);
 	}
@@ -28,7 +29,7 @@ class ArticleController extends Controller
 		return view('articles.create');
 	}
 	
-	public function store(Request $request) {
+	public function store(ArticlesForm $request) {
 		$input = $request->all();
 		$input['published_at'] = Carbon\Carbon::now();
 		Articles::create($input);

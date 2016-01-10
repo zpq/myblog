@@ -11,22 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
-Route::get('about', 'SiteController@about');
-Route::get('articles', 'ArticleController@index');
-Route::get('articles/create', 'ArticleController@create');
-Route::get('articles/{id}', 'ArticleController@show');
-Route::post('articles', 'ArticleController@store');
 
-Route::get('auth/login', 'Auth\AuthController@getLogin');
-Route::post('auth/login', 'Auth\AuthController@postLogin');
-Route::get('auth/register', 'Auth\AuthController@getRegister');
-Route::post('auth/register', 'Auth\AuthController@postRegister');
-Route::get('auth/logout', 'Auth\AuthController@getLogout');
 	
 /*
 |--------------------------------------------------------------------------
@@ -40,14 +30,25 @@ Route::get('auth/logout', 'Auth\AuthController@getLogout');
 */
 
 Route::group(['middleware' => ['web']], function () {
+	Route::get('/', 'ArticleController@index');
+	Route::get('about', 'SiteController@about');
+	Route::get('articles', 'ArticleController@index');
+	Route::get('articles/create', 'ArticleController@create');
+	Route::get('articles/{id}', 'ArticleController@show');
+	Route::post('articles', 'ArticleController@store');
 	
+	Route::get('auth/login', 'Auth\AuthController@getLogin');
+	Route::post('auth/login', 'Auth\AuthController@postLogin');
+	Route::get('auth/register', 'Auth\AuthController@getRegister');
+	Route::post('auth/register', 'Auth\AuthController@postRegister');
+	Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
 });
 
 
-Route::group(['prefix'=>'backend','middleware'=>'auth'],function(){
+Route::group(['prefix'=>'backend','middleware'=>'auth'], function(){
 	
-	Route::any('/','backend\HomeController@index');
+	Route::get('/','backend\HomeController@index');
 // 	Route::resource('home', 'backend\HomeController');
 // 	Route::resource('cate','backend\CateController');
 // 	Route::resource('content','backend\ContentController');
