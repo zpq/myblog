@@ -21,18 +21,26 @@
 								placeholder="title">
 						</div>
 						<div class="form-group">
-							<label for="exampleInputPassword1">tags</label> <input
-								type="text" name='tags' class="form-control" id="exampleInputPassword1"
-								placeholder="tags">
+							<label for="exampleInputPassword1">tags</label> 
+							<input
+								type="text" name='tags' class="form-control" id="tags_input"
+								placeholder="tag,tag,tag,..." max='256'>
+								<br/>
+								<div id='exist_tags'>
+									@if(count($tagsList))
+									@foreach($tagsList as $tag)
+										<a href='#' class="btn btn-default xxx">{{ $tag->tag_name }}</a>
+	<!-- 									<a href='#' class="btn btn-default xxx">信息标哈</a> -->
+	<!-- 									<a href='#' class="btn btn-default xxx">标签</a> -->
+	<!-- 									<a href='#' class="btn btn-default xxx">成功警告</a> -->
+									@endforeach
+									@endif
+								</div>		
 						</div>
 						<div class="form-group editor">
 			                  <label>Textarea</label>
 			                  <textarea id='myEditor' name='content' class="form-control" rows="10" placeholder="Enter ..."></textarea>
 						</div>
-<!-- 						<div class="checkbox"> -->
-<!-- 							<label> <input type="checkbox"> Check me out -->
-<!-- 							</label> -->
-<!-- 						</div> -->
 					</div>
 					<!-- /.box-body -->
 
@@ -50,4 +58,20 @@
 			<h3>{{$error}}</h3>
 		@endforeach
 	@endif
+	
+	<script>
+		$(function(){
+			$("#exist_tags a").each(function(){
+				$(this).one('click',function(){
+					var tags_input_value = $("#tags_input").val();
+					if(tags_input_value)
+						$("#tags_input").val(tags_input_value + ',' + $(this).html());
+					else 
+						$("#tags_input").val($(this).html());
+					$(this).removeClass('btn-default').addClass('btn-danger');
+				});
+			});
+		});
+	</script>
+	
 @stop

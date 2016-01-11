@@ -13,10 +13,10 @@ class CreateArticlesMapTagsTable extends Migration
     public function up()
     {
         Schema::create('articlesMapTags', function (Blueprint $table) {
-            $table->integer('article_id');
-            $table->integer('tag_id');
+            $table->integer('articles_id');
+            $table->integer('tags_id');
             $table->timestamps();
-            $table->primary(['article_id','tag_id']);
+            $table->primary(['articles_id','tags_id']);
         });
     }
 
