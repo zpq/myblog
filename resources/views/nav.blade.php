@@ -22,6 +22,7 @@
 	<div class="collapse navbar-collapse" id="example-navbar-collapse">
 		<ul class="nav navbar-nav">
 			<li class="active"><a href="{{ url('/articles') }}">articles</a></li>
+			<li><a href="#">category</a></li>
 			<li><a href="#">book list</a></li>
 			<li><a href="#">funny thing</a></li>
 			<li><a href="#">donate</a></li>

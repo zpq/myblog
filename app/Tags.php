@@ -11,4 +11,8 @@ class Tags extends Model
     public function articles() {
     	return $this->belongsToMany('App\Articles', 'articlesMapTags');
     }
+    
+    public static function getTagList($limit = 10) {
+    	return self::orderBy('use_nums','DESC')->limit($limit)->get();
+    } 
 }

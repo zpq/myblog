@@ -22,15 +22,11 @@
 	<hr />
 	
 	<h4>标签云</h4>
-	<a href='#' class="btn btn-default xxx">主要标签</a>
-	<a href='#' class="btn btn-default xxx">信息标哈</a>
-	<a href='#' class="btn btn-default xxx">标签</a>
-	<a href='#' class="btn btn-default xxx">成功警告</a>
-	<a href='#' class="btn btn-default xxx">签哈警告警功</a>
-	<a href='#' class="btn btn-default xxx">警告警告</a>
-	<a href='#' class="btn btn-default xxx">成功</a>
-	<a href='#' class="btn btn-default xxx">成信警告功</a>
-	
+	@if(count($tagLists))
+	@foreach($tagLists as $tagList)
+		<a href='#' class="btn btn-default xxx">{{ $tagList->tag_name }}</a>
+	@endforeach
+	@endif
 	<hr />
 	
 	<p><a href="{{ url('/backend') }}" class="btn btn-primary btn-lg">manage</a></p>

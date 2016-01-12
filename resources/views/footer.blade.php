@@ -1,5 +1,8 @@
-<hr />
+
+
 <div class="clearfix"></div>
+<br />
+<hr />
 <footer>
     <p>
         Powered by <a target='_blank' href="https://laravel.com/">Laravel</a>, UI by <a target='_blank' href="http://www.bootcss.com/">Bootstrap</a>, Design by <a target='_blank' href="https://github.com/zpq">zpq</a>.

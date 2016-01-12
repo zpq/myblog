@@ -11,10 +11,8 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
     
-//     public function __construct() {
-    	
-//     	session('current_path', $this->getRouter()->current()->getPath());
-//     	echo session('current_path');
-//     }
+    public function __construct() {
+    		
+    }
     
 }

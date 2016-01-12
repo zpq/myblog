@@ -51,7 +51,8 @@
 			<br />
 			<div class="row">
 				<div class="col-xs-12 text-capitalize">
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ strCut($article->content,20) }}
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					{{ strCut($article->content,40) }}
 				</div>
 			</div>	
 	
@@ -64,7 +65,7 @@
 	<hr/>
 @endforeach
 @endif
-
+{!! $articles->links() !!}
 <script>
 	$(function(){
 		var panel_color = ['panel-primary', 'panel-success', 'panel-info', 'panel-warning', 'panel-danger'];
