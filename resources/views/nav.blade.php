@@ -7,6 +7,7 @@
 <!-- 		</div> -->
 <!--     </div> -->
   <h1>Hello Friend!&nbsp;&nbsp;<small>Welcome to my blog!</small></h1>
+
 </div>
 
 
@@ -21,10 +22,10 @@
 	</div>
 	<div class="collapse navbar-collapse" id="example-navbar-collapse">
 		<ul class="nav navbar-nav">
-			<li class="active"><a href="{{ url('/articles') }}">articles</a></li>
+			<li><a href="{{ url('/articles') }}">articles</a></li>
 			<li><a href="#">category</a></li>
-			<li><a href="#">book list</a></li>
-			<li><a href="#">funny thing</a></li>
+			<li><a href="#">bookList</a></li>
+			<li><a href="#">funnyThing</a></li>
 			<li><a href="#">donate</a></li>
 			<li><a href="{{ url('/about') }}">about</a></li>
 			<!--          <li class="dropdown"> -->
@@ -53,18 +54,9 @@
 	</div>
 </nav>
 
-<?php
-// var_dump(session('current_path'));
-?>
-
-<!-- 	<ul class="nav nav-pills"> -->
-<!-- 	   <li class="active"><a href="{{ url('/articles') }}">Home</a></li> -->
-<!-- 	   <li><a href="#">book list</a></li> -->
-<!-- 	   <li><a href="#">donate</a></li> -->
-<!-- 	   <li><a href="#">funny resource</a></li> -->
-<!-- 	   <li><a href="{{ url('/about') }}">about</a></li> -->
-<!-- 	</ul> -->
+<ol class="breadcrumb">
+  <li><a href="{{ url('/articles') }}">Home</a></li>
+  <li class="active">{{$activeNav}}</li>
+</ol>
 
 
-
-<br />

@@ -52,14 +52,9 @@
 			<div class="row">
 				<div class="col-xs-12 text-capitalize">
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					{{ strCut($article->content,40) }}
+					{{ strCut($article->content, 40) }}
 				</div>
 			</div>	
-	
-			<div class="row">
-				
-	<!-- 			<div class="col-xs-8"><span>tags : 哈哈  哈啊哈  哈哈</span></div> -->
-			</div>
 		</div>
 	</div>
 	<hr/>

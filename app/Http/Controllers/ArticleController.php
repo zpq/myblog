@@ -31,7 +31,10 @@ class ArticleController extends Controller
 	
 	public function show($id)
 	{    	
-		$article = Articles::findOrFail($id);
+		$article = Articles::find($id);
+		if(!$article) {
+			return view('errors.404');
+		}
 		$article->content = EndaEditor::MarkDecode($article->content);
 		return view('articles.show')->with('article', $article);
 	}
