@@ -15,7 +15,7 @@
 	<h4>标签云</h4>
 	@if(count($tagLists))
 		@foreach($tagLists as $tagList)
-			<a href='#' class="btn btn-default xxx">{{ $tagList->tag_name }}</a>
+			<a href='{{ url("search/tags", $tagList->id) }}' class="btn btn-default xxx">{{ $tagList->tag_name }}</a>
 		@endforeach
 	@endif
 	

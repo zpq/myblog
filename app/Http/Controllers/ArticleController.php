@@ -9,13 +9,11 @@ use App\Http\Controllers\Controller;
 use App\Articles;
 use Carbon;
 use YuanChao\Editor\EndaEditor;
-use Illuminate\Routing\Router;
 
 class ArticleController extends Controller
 {
     public function index(Request $request)
     {
-//     	dd($request->path());
 //     	dd(\Auth::user()->name);
     	$articles = [];
 		$articles = Articles::orderBy('published_at', 'DESC')->paginate(5);

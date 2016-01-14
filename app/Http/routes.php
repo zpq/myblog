@@ -64,7 +64,8 @@ Route::group(['middleware' => ['web']], function () {
 // 	Route::get('articles/create', 'ArticleController@create');
 	Route::get('articles/{id}', 'ArticleController@show');
 // 	Route::post('articles', 'ArticleController@store');
-
+	Route::post('search/index', 'SearchController@index');
+	Route::get('search/tags/{id}', 'SearchController@tags');
 // 	Route::get('auth/login', 'Auth\AuthController@getLogin');
 // 	Route::post('auth/login', 'Auth\AuthController@postLogin');
 // 	Route::get('auth/register', 'Auth\AuthController@getRegister');

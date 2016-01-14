@@ -1,14 +1,18 @@
 <?php
 
 return array(
+	
 	'navLists' => [
-			'articles'=>['/^\/$/', '/^articles$/', '/^articles(\/\d*)*$/'], 
-			'category' => ['/^category$/', '/^category(\/\d*)*$/'], 
-			'book list' => ['/^bookList$/'],
-			'funny thing' => ['/^funnyThing$/'], 
+			'articles_one' => ['/^search\/index$/', '/^articles(\/\d*)*$/'],
+// 			'category_one' => ['/^category(\/\d*)*$/'],
+// 			'category' => ['/^category$/'],
+			'articles' => ['/^\/$/', '/^articles$/', '/^search\/tags\/\d+$/'],
+			'about' => ['/^about$/'],
 			'donate' => ['/^donate$/'],
-			'about' => ['/^about$/']
+			'booklist' => ['/^booklist$/'],
+			'funny' => ['/^funny$/'],
 	],
+		
 );
 
 

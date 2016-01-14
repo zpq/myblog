@@ -17,19 +17,22 @@ class AppServiceProvider extends ServiceProvider
     {
     	$uri = $request->path();//获取当前uri，做导航栏active， 面包学导航
     	$navLists = config('myConfig.navLists');
-    	$activeNav = '';
+    	$activeNav = [];
 		foreach ($navLists as $key => $navList) {
 			foreach ($navList as $navLt) {
 				if (preg_match($navLt, $uri)) {
-					$activeNav = $key;
+					if($key == 'articles_one') {
+						$activeNav = ['articles', ''];
+					} else {
+						$activeNav = [$key];
+					}
 					break;
 				}
 			}
 		}
 // 		dd($activeNav);
-		
 		$tagLists = Tags::getTagList();
-		view()->share(['tagLists' => $tagLists, 'activeNav' => $activeNav, ]);
+		view()->share(['tagLists' => $tagLists, 'activeNavs' => $activeNav, ]);
     }
 
     /**
