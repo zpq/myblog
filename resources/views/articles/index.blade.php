@@ -39,7 +39,7 @@
 				<div class="col-xs-8 text-right">
 					tags:
 					@foreach($article->tags as $tag)
-					<a href=''><span class="label label-default">{{$tag->tag_name}}</span></a>
+					<a href='{{ url("search/tags", $tag->id) }}'><span class="label label-default">{{$tag->tag_name}}</span></a>
 <!-- 					<span class="label label-primary">主要标签</span> -->
 <!-- 					<span class="label label-success">成功标签</span> -->
 <!-- 					<span class="label label-info">信息标签</span> -->

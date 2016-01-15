@@ -56,7 +56,7 @@
   	@if(count($activeNavs) == 2)
 		<li><a href="{{ url('articles') }}">Home</a></li>
 		<li><a href="{{ url($activeNavs[0]) }}"> {{ $activeNavs[0] }}</a></li>
-		<li class="active">{{ $article->title }}</li>
+		<li class="active">{{ $article->title or '' }}</li>
 	@else
 		<li><a href="{{ url('articles') }}">Home</a></li>
 		<li class="active">{{$activeNavs[0]}}</li>

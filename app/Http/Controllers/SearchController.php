@@ -17,6 +17,8 @@ class SearchController extends Controller
 	
 	public function index(Request $request) {
 		$keywords = $request->input('keywords');
+		if(!$keywords)
+			return redirect('/');
 		$articles = [];
 		$articles = Articles::articleSearchByKeywords($keywords, 3);
 		if(count($articles)) {
@@ -24,6 +26,7 @@ class SearchController extends Controller
 				$article->content = EndaEditor::MarkDecode($article->content);
 			}
 		}
+		
 		return view('articles.index')->with('articles', $articles);
 	}
 	
