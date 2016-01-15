@@ -40,7 +40,8 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Be right back.</div>
+                <div class="title">Sorry!You have no right to do it!</div>
+                <div class="title">Return to <a href="{{ url('/') }}">home</a></div>
             </div>
         </div>
     </body>

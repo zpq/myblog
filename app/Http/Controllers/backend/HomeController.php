@@ -5,6 +5,7 @@ namespace App\Http\Controllers\backend;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Gate;
 
 class HomeController extends Controller
 {
@@ -16,6 +17,9 @@ class HomeController extends Controller
     public function __construct()
     {
 //         $this->middleware('auth');
+    	if (Gate::denies('adminRight', \Auth::user())) {
+    		abort(503);
+    	}
     }
 
     /**

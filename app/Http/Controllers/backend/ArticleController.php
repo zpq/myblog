@@ -9,10 +9,17 @@ use App\Http\Controllers\Controller;
 use App\Articles;
 use App\Tags;
 use Carbon;
-use App\Http\Requests\ArticlesForm;
+use Gate;
 
 class ArticleController extends Controller
 {
+	public function __construct()
+	{
+		if (Gate::denies('adminRight', \Auth::user())) {
+			abort(503);
+		}
+	}	
+	
     public function index()
     {
 //     	dd(\Auth::user()->name);
