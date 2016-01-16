@@ -23,4 +23,18 @@ class Articles extends Model
     	return Tags::find($tagId)->articles()->orderBy('published_at', 'DESC')->paginate($limit);
     }
     
+    public static function getTagsOfStringWay($id) {
+    	$str = '';
+    	$tags = static::find($id)->tags;
+    	if(isset($tags) && count($tags))
+    	foreach($tags as $key => $tag) {
+    		if($key) {
+    			$str = $str . ',' . $tag->tag_name;
+    		} else {
+    			$str = $tag->tag_name;
+    		}
+    	}
+    	return $str;
+    }
+    
 }

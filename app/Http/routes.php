@@ -38,7 +38,9 @@ Route::group(['middleware' => ['web']], function () {
 		Route::get('test', 'HomeController@test');
 		Route::get('articles', 'ArticleController@index');
 		Route::get('articles/create', 'ArticleController@create');
+		Route::get('articles/edit/{id}', 'ArticleController@edit');
 		Route::post('articles', 'ArticleController@store');
+		Route::post('articles/update', 'ArticleController@update');
 		// 			Route::resource('home', 'backend\HomeController');
 		// 	Route::resource('cate','backend\CateController');
 		// 	Route::resource('content','backend\ContentController');

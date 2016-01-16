@@ -8,38 +8,37 @@
 
 			<div class="box box-primary">
 				<div class="box-header with-border">
-					<h3 class="box-title">article create</h3>
+					<h3 class="box-title">article edit</h3>
 				</div>
 				<!-- /.box-header -->
 				<!-- form start -->
-				<form role="form" method='post' action="{{ url('backend/articles') }}">
+				<form role="form" method='post' action="{{ url('backend/articles/update') }}">
 					{{ csrf_field() }}
+					<input type="hidden" name='id' class="form-control" value="{{ $article->id or '' }}" />
 					<div class="box-body">
 						<div class="form-group">
-							<label for="exampleInputEmail1">title</label> <input
-								type="text" name='title' class="form-control" id="exampleInputEmail1"
+							<label>title</label> 
+							<input type="text" name='title' class="form-control" value="{{ $article->title or '' }}"
 								placeholder="title">
 						</div>
 						<div class="form-group">
-							<label for="exampleInputPassword1">tags</label> 
+							<label>tags</label> 
 							<input
 								type="text" name='tags' class="form-control" id="tags_input"
+							    value="{{ $stringTags }}"
 								placeholder="tag,tag,tag,..." max='256'>
 								<br/>
 								<div id='exist_tags'>
 									@if(count($tagsList))
 									@foreach($tagsList as $tag)
 										<a href='#' class="btn btn-default xxx">{{ $tag->tag_name }}</a>
-	<!-- 									<a href='#' class="btn btn-default xxx">信息标哈</a> -->
-	<!-- 									<a href='#' class="btn btn-default xxx">标签</a> -->
-	<!-- 									<a href='#' class="btn btn-default xxx">成功警告</a> -->
 									@endforeach
 									@endif
 								</div>		
 						</div>
 						<div class="form-group editor">
 			                  <label>Textarea</label>
-			                  <textarea id='myEditor' name='content' class="form-control" rows="10" placeholder="Enter ..."></textarea>
+			                  <textarea id='myEditor' name='content' class="form-control" rows="10" placeholder="Enter ...">{{ $article->content or '' }}</textarea>
 						</div>
 					</div>
 					<!-- /.box-body -->
@@ -61,9 +60,20 @@
 	
 	<script>
 		$(function(){
+
+// 			delete space in tags
+// 			var tags_input = $('#tags_input').val().split(",");
+// 			var new_tags_input = [];
+// 			for(tag in tags_input) {
+// 				new_tags_input.push($.trim(tags_input[tag]));
+// 			}
+// 			tags_input = new_tags_input.join(',');
+// 			$('#tags_input').val(new_tags_input);
+// 			delete space in tags			
+			
+			
 			$("#exist_tags a").each(function(){
 				$(this).on('click',function(){
-// 				$(this).one('click',function(){
 					var tags_input_value = $("#tags_input").val();
 					if(tags_input_value)
 						$("#tags_input").val(tags_input_value + ',' + $(this).html());

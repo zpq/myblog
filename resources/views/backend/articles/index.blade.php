@@ -10,7 +10,7 @@
 	         <th>title</th>
 	         <th>content</th>
 	         <th>published_at</th>
-<!-- 	         <th>tags</th> -->
+	         <th>action</th>
 	      </tr>
 	   </thead>
 	   <tbody>
@@ -20,6 +20,7 @@
 	         <td>{{ $article->title }}</td>
 	         <td>{{ str_limit($article->content, 20) }}</td>
 	         <td>{{ $article->published_at }}</td>
+	         <td><a href="{{ url('backend/articles/edit', $article->id) }}">edit</a></td>
 	      </tr>
 	   </tbody>
 	   @endforeach
