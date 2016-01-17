@@ -12,7 +12,7 @@ use YuanChao\Editor\EndaEditor;
 
 class ArticleController extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {
 //     	dd(\Auth::user()->name);
     	$articles = [];

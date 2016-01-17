@@ -41,6 +41,7 @@ Route::group(['middleware' => ['web']], function () {
 		Route::get('articles/edit/{id}', 'ArticleController@edit');
 		Route::post('articles', 'ArticleController@store');
 		Route::post('articles/update', 'ArticleController@update');
+		Route::post('articles/uploadArticleImg', 'ArticleController@uploadArticleImg');
 		// 			Route::resource('home', 'backend\HomeController');
 		// 	Route::resource('cate','backend\CateController');
 		// 	Route::resource('content','backend\ContentController');

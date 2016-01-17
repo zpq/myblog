@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
-use Request;
 use Log;
 class SiteController extends Controller {
-	
-	
+
 // 	public function __construct() {
 // 		$this->middleware('auth');
 // 	}
@@ -25,9 +23,9 @@ class SiteController extends Controller {
 	public function about()
 	{
 		$me = [
-				'name'  		=> 		'sheaned',
-				'description' 	=>		'a male coder',
-				'email' 		=> 		'sheaned@sina.cn',
+				'name'  		=> 		'zpq',
+				'description' 	=>		'wish to be a full stack developer',
+				'email' 		=> 		'307154456@qq.com',
 				'github' 		=> 		'https://github.com/zpq'
 		];
 		return view('about')->with($me);
