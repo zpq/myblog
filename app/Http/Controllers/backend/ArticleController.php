@@ -11,6 +11,7 @@ use App\Tags;
 use Carbon;
 use Gate;
 use Illuminate\Support\Facades\DB;
+use YuanChao\Editor\EndaEditor;
 
 class ArticleController extends Controller
 {
@@ -158,6 +159,10 @@ class ArticleController extends Controller
 		
 		return redirect('backend/articles');
 	}
-	
+
+	public function uploadArticleImg() {
+		$data = EndaEditor::uploadImgFile('upload/articleImg');
+		return json_encode($data);
+	}
 	
 }
