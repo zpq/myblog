@@ -40,5 +40,10 @@
 </script>
 <!-- GoogleAnalytics end-->
 
+
+<!-- baidu share start-->
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"code can change world!","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"4","bdPos":"left","bdTop":"203.5"},"image":{"viewList":["qzone","tsina","tqq","weixin","douban","sqq"],"viewText":"分享到：","viewSize":"32"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<!-- baidu share end-->
+
 </body>
 </html>
