@@ -161,7 +161,7 @@ class ArticleController extends Controller
 	}
 
 	public function uploadArticleImg() {
-		$data = EndaEditor::uploadImgFile('upload/articleImg');
+		$data = EndaEditor::uploadImgFile('uploadArticleImg');
 		return json_encode($data);
 	}
 	
