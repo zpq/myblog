@@ -2,6 +2,6 @@
 
 return [
     // 宽度
-    'width'=>'890px',
+    'width'=>'1080px',
     'uploadUrl'=>'backend/articles/uploadArticleImg'
 ];
