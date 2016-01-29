@@ -4,7 +4,7 @@
 <section class="content">
 	<div class="row">
 		<!-- left column -->
-		<div class="col-xs-8 col-xs-offset-2">
+		<div class="col-xs-10 col-xs-offset-1">
 
 			<div class="box box-primary">
 				<div class="box-header with-border">
