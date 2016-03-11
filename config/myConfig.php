@@ -12,6 +12,7 @@ return array(
 			'booklist' => ['/^booklist$/'],
 			'funny' => ['/^funny$/'],
 	],
+	'tagListsNums' => 50,
 		
 );
 
