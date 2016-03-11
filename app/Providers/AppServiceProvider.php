@@ -31,7 +31,7 @@ class AppServiceProvider extends ServiceProvider
 			}
 		}
 // 		dd($activeNav);
-		$tagLists = Tags::getTagList('myConfig.tagListsNums');
+		$tagLists = Tags::getTagList(config('myConfig.tagListsNums'));
 		view()->share(['tagLists' => $tagLists, 'activeNavs' => $activeNav, ]);
     }
 
