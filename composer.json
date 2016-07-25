@@ -10,7 +10,7 @@
         "laravelcollective/html": "^5.2",
 	"gregwar/captcha": "1.*",
 	"yuanchao/laravel-5-markdown-editor": "dev-master",
-	"predis/predis":"~1.0.1"	
+	"predis/predis":"~1.1.0"	
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
