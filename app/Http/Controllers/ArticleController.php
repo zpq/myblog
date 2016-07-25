@@ -33,14 +33,14 @@ class ArticleController extends Controller
         $redis = Redis::connection('default');
         $article = $redis->get("article_$id");
         if ($article) {
-
+            $article = unserialize($article);
         } else {
             $article = Articles::find($id);
     		if(!$article) {
     			return view('errors.404');
     		}
     		$article->content = EndaEditor::MarkDecode($article->content);
-            $redis->set("article_$id", $article);
+            $redis->set("article_$id", serialize($article));
         }
 
 		return view('articles.show')->with('article', $article);
