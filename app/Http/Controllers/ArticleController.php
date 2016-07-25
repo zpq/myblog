@@ -40,7 +40,7 @@ class ArticleController extends Controller
     			return view('errors.404');
     		}
     		$article->content = EndaEditor::MarkDecode($article->content);
-            $redis->set("article_$id", $article_);
+            $redis->set("article_$id", $article);
         }
 
 		return view('articles.show')->with('article', $article);
