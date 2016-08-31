@@ -14,7 +14,7 @@
 
 
 <!-- 多说评论框 start -->
-{{-- <div class="ds-thread" data-thread-key="{{ $article->id }}" data-title="{{ $article->title }}" data-url="{{ $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] }}"></div> --}}
+<div class="ds-thread" data-thread-key="{{ $article->id }}" data-title="{{ $article->title }}" data-url="{{ $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] }}"></div>
 <!-- 多说评论框 end -->
 
 @stop
