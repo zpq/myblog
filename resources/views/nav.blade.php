@@ -22,7 +22,7 @@
 		<ul class="nav navbar-nav">
 			<li><a href="{{ url('articles') }}">articles</a></li>
 			<li><a href="#">booklist</a></li>
-			<li><a href="#">funny</a></li>
+			<li><a href="{{ url('funny') }}">funny</a></li>
 			<li><a href="#">donate</a></li>
 			<li><a href="{{ url('about') }}">about</a></li>
 			<!--          <li class="dropdown"> -->

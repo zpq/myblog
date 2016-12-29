@@ -13,6 +13,9 @@ return array(
 			'funny' => ['/^funny$/'],
 	],
 	'tagListsNums' => 50,
+	'funnyApps' => [
+		['name' => '短域名生成工具', 'description' => '短域名生成工具', 'url' => 'http://t.sheaned.com'],
+	],
 		
 );
 

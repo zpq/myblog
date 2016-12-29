@@ -75,7 +75,7 @@ Route::group(['middleware' => ['web']], function () {
 // 	Route::post('auth/register', 'Auth\AuthController@postRegister');
 // 	Route::get('auth/logout', 'Auth\AuthController@logout');
 	
-
+	Route::get('funny', 'FunnyController@index');
 
 	
 	
