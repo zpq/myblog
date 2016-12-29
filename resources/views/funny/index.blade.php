@@ -7,7 +7,7 @@
 		<div class="col-xs-12">
 			<div class="row">
 				<div class="col-xs-8">
-					<h3><a href="{{ $funnyApps['url'] }}">{{ $funnyApps['name'] }}</a></h3>
+					<h3><a href="{{ $funnyApp['url'] }}">{{ $funnyApp['name'] }}</a></h3>
 				</div>
 			</div>
 			{{-- <div class="row">
@@ -25,7 +25,7 @@
 			<div class="row">
 				<div class="col-xs-12 text-capitalize">
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					{{ $funnyApps['description'] }}
+					{{ $funnyApp['description'] }}
 				</div>
 			</div>	
 		</div>
